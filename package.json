@@ -34,5 +34,18 @@
     "postcss": "^8.5.3",
     "tailwindcss": "3.3.5",
     "vite": "^6.1.0"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woozizi/mbti_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woozizi/mbti_test/issues"
+  },
+  "homepage": "https://github.com/woozizi/mbti_test#readme"
 }
