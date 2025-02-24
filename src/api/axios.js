@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const jsonApi = axios.create({
-  baseURL: "https://abounding-dandelion-roadway.glitch.me",
+  baseURL: "https://materialistic-wool-chinchilla.glitch.me",
 });
 
 export const serverApi = axios.create({
