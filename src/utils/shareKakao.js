@@ -1,3 +1,5 @@
+import logo from "../assets/logo.png";
+
 const shareKakao = (result) => {
   if (!window.Kakao) {
     alert("sdk 오류");
@@ -13,7 +15,7 @@ const shareKakao = (result) => {
     content: {
       title: `나의 MBTI 테스트 결과: ${result.result}`,
       description: "나의 성격 유형을 확인해보세요!",
-      imageUrl: `${window.location.origin}/logo.png`,
+      imageUrl: logo,
       link: {
         mobileWebUrl: window.location.href,
         webUrl: window.location.href,
