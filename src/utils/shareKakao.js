@@ -25,8 +25,8 @@ const shareKakao = (result) => {
       {
         title: "테스트 하러 가기",
         link: {
-          mobileWebUrl: window.location.href,
-          webUrl: window.location.href,
+          mobileWebUrl: window.location.origin,
+          webUrl: window.location.origin,
         },
       },
     ],
