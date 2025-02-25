@@ -18,7 +18,7 @@ export const login = async (userData) => {
     return data;
   } catch (err) {
     if (err.response && err.response.status === 401) {
-      throw new Error("비밀번호가 틀렸거나, 등록되지 않은 사용자입니다.");
+      throw new Error("비밀번호가 틀렸거나, 등록되지 않은 아이디입니다.");
     }
     throw err;
   }
