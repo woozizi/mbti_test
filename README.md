@@ -1,9 +1,9 @@
 # MBTI Test
-
-[MBTI Test](https://mbti-test-woozi.vercel.app/)
-
+![메인 페이지 스크린샷](./public/mainpageimg.png)
 
 - MBTI Test은 사용자가 자신의 MBTI 성격 유형을 간단한 테스트를 통해서 확인할 수 있는 웹 애플리케이션입니다.
+
+[MBTI Test](https://mbti-test-woozi.vercel.app/)
 
 ## 주요 기능
 
@@ -50,3 +50,9 @@ mbti-test-app/
 ├── tailwind.config.js
 └── vite.config.js
 ```
+
+## 트러블 슈팅
+
+[useContext사용 시, 새로고침 후 로그인 상태 유지 문제](https://velog.io/@woozi__zi/useContext%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8-%ED%9B%84-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%83%81%ED%83%9C-%EC%9C%A0%EC%A7%80-%EB%AC%B8%EC%A0%9C)
+
+[날짜 형식 올바르게 나오게 하기](https://velog.io/@woozi__zi/%EC%8B%9C%EA%B0%84-%ED%98%95%EC%8B%9D%EC%9D%84-%EB%B3%B4%EA%B8%B0-%EC%A2%8B%EA%B2%8C-%EB%B0%94%EA%BE%B8%EB%8A%94-%EB%B2%95)
