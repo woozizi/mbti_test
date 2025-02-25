@@ -1,9 +1,9 @@
 import axios from "axios";
 
 export const jsonApi = axios.create({
-  baseURL: "https://materialistic-wool-chinchilla.glitch.me",
+  baseURL: import.meta.env.VITE_JSON_SERVER_URL,
 });
 
 export const serverApi = axios.create({
-  baseURL: "https://www.nbcamp-react-auth.link",
+  baseURL: import.meta.env.VITE_SERVER_URL,
 });

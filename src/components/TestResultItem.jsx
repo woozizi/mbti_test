@@ -1,5 +1,6 @@
 import { format } from "date-fns";
 import { mbtiDescriptions } from "../utils/mbtiCalculator";
+import shareKakao from "../utils/shareKakao";
 
 const TestResultItem = ({ result, isOwner, onVisibilityChange, onDelete }) => {
   const formatTime = format(new Date(result.date), "yyyy-MM-dd HH:mm:ss");
@@ -41,6 +42,12 @@ const TestResultItem = ({ result, isOwner, onVisibilityChange, onDelete }) => {
             className="px-2 py-1 text-sm bg-red-500 text-white rounded hover:bg-white hover:text-red-500"
           >
             삭제
+          </button>
+          <button
+            onClick={() => shareKakao(result)}
+            className="px-2 py-1 text-sm bg-white text-black rounded hover:bg-white hover:text-red-500"
+          >
+            공유
           </button>
         </div>
       )}
