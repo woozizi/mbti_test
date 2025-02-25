@@ -19,17 +19,19 @@ const Profile = () => {
   if (isError) {
     return <div>데이터 조회 중 오류가 발생했습니다.</div>;
   }
+
+  //닉네임 변경
   const handleNicknameChange = (e) => {
     setNickname(e.target.value);
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const formData = new FormData();
-      formData.append("nickname", nickname);
+      const updatedNickname = { nickname };
 
       const token = user.accessToken;
-      const response = await updateProfile(formData, token);
+      const response = await updateProfile(updatedNickname, token);
 
       setUser({
         ...user,
@@ -42,6 +44,7 @@ const Profile = () => {
     }
   };
 
+  //나의 테스트 결과들을 최신순으로 나열
   const filterResults = testResults
     .filter((result) => result.userId === user.userId)
     .sort((a, b) => (b.date > a.date ? 1 : -1));

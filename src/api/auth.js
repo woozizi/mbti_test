@@ -1,5 +1,6 @@
 import { serverApi } from "./axios";
 
+//회원가입
 export const register = async (userData) => {
   try {
     const { data } = await serverApi.post(`/register`, userData);
@@ -16,6 +17,7 @@ export const register = async (userData) => {
   }
 };
 
+//로그인
 export const login = async (userData) => {
   try {
     const { data } = await serverApi.post(`/login`, userData);
@@ -28,6 +30,7 @@ export const login = async (userData) => {
   }
 };
 
+//유저정보 가져오기
 export const getUserProfile = async (accessToken) => {
   const { data } = await serverApi.get(`/user`, {
     headers: {
@@ -37,8 +40,9 @@ export const getUserProfile = async (accessToken) => {
   return data;
 };
 
-export const updateProfile = async (formData, accessToken) => {
-  const { data } = await serverApi.patch(`/profile`, formData, {
+//유저 정보 업데이트
+export const updateProfile = async (updatedNickname, accessToken) => {
+  const { data } = await serverApi.patch(`/profile`, updatedNickname, {
     headers: {
       "Content-Type": "multipart/form-data",
       Authorization: `Bearer ${accessToken}`,

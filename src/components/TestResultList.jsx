@@ -16,6 +16,7 @@ const TestResultList = () => {
     return <div>데이터 조회 중 오류가 발생했습니다.</div>;
   }
 
+  //공개 및 내 테스트 결과 최신순으로
   const filterResults = testResults
     .filter((result) => result.visibility || result.userId === user.userId)
     .sort((a, b) => (b.date > a.date ? 1 : -1));
