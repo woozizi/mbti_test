@@ -47,23 +47,26 @@ const Profile = () => {
     .sort((a, b) => (b.date > a.date ? 1 : -1));
 
   return (
-    <div className=" flex flex-col items-center justify-center bg-gray-50 rounded shadow-md">
-      <div className="bg-white m-8 p-8 rounded-lg shadow-md w-full max-w-xl">
-        <form onSubmit={handleSubmit} className="p-4 bg-gray-100 ">
+    <div className=" flex flex-col items-center justify-center bg-gray-50">
+      <div className="bg-white px-8 rounded-lg shadow-md w-full max-w-lg">
+        <form
+          onSubmit={handleSubmit}
+          className="p-4 my-4 mx-8 rounded-lg shadow-md "
+        >
           <div>
-            <label className="block mb-4 font-semibold">닉네임 변경</label>
+            <label className=" mb-4 text-base">현재 닉네임 : </label>
             <input
               type="text"
               value={nickname}
               onChange={(e) => handleNicknameChange(e)}
-              className=" px-2 py-1 border border-gray-300 rounded-lg mb-4"
+              className=" pl-2 py-1 border border-gray-300 rounded-lg mb-4 "
               placeholder={nickname}
               required
             />
           </div>
           <button
             type="submit"
-            className=" px-2 py-1 mb-4 text-sm bg-red-500 text-white rounded hover:bg-white hover:text-red-500"
+            className=" px-2 py-1 text-sm bg-red-500 text-white rounded hover:bg-white hover:text-red-500"
           >
             닉네임 변경
           </button>

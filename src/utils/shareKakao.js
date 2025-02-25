@@ -14,7 +14,7 @@ const shareKakao = (result) => {
     objectType: "feed",
     content: {
       title: `나의 MBTI 테스트 결과: ${result.result}`,
-      description: "나의 성격 유형을 확인해보세요!",
+      description: "나의 MBTI를 확인해보세요!",
       imageUrl: logo,
       link: {
         mobileWebUrl: window.location.href,

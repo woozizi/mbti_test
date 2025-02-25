@@ -20,17 +20,20 @@ const Header = () => {
         <nav className="flex space-x-4">
           {user ? (
             <>
-              <Link to="/testPage" className="hover:text-red-500">
+              <Link to="/testPage" className="text-sm hover:text-red-500">
                 테스트하기
               </Link>
-              <Link to="/profile" className="hover:text-red-500 ">
+              <Link to="/profile" className="text-sm hover:text-red-500 ">
                 마이페이지
               </Link>
 
-              <Link to="/testResults" className="hover:text-red-500">
+              <Link to="/testResults" className="text-sm hover:text-red-500">
                 게시판
               </Link>
-              <button onClick={handleLogout} className="hover:text-red-500">
+              <button
+                onClick={handleLogout}
+                className="text-sm hover:text-red-500"
+              >
                 로그아웃
               </button>
             </>

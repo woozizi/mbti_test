@@ -5,7 +5,7 @@ import shareKakao from "../utils/shareKakao";
 const TestResultItem = ({ result, isOwner, onVisibilityChange, onDelete }) => {
   const formatTime = format(new Date(result.date), "yyyy-MM-dd HH:mm:ss");
   return (
-    <div className="p-4 border rounded-lg flex flex-col  bg-slate-700">
+    <div className="p-4 mb-6 border rounded-lg bg-slate-700">
       <div className="flex justify-between items-center mb-2 pb-3 border-b border-white">
         <span className="text-white">{result.nickname}</span>
         <span className="text-sm text-white">{formatTime}</span>

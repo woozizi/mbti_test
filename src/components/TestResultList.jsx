@@ -21,7 +21,7 @@ const TestResultList = () => {
     .sort((a, b) => (b.date > a.date ? 1 : -1));
 
   return (
-    <div className="space-y-4">
+    <div>
       {filterResults.map((result) => (
         <TestResultItem
           key={result.id}
