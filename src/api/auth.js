@@ -8,6 +8,10 @@ export const register = async (userData) => {
     if (err.response && err.response.status === 409) {
       throw new Error("이미 등록된 아이디입니다.");
     }
+    if (err.response && err.response.status === 401) {
+      throw new Error("이미 등록된 아이디입니다.");
+    }
+
     throw err;
   }
 };
