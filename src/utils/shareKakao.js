@@ -13,7 +13,7 @@ const shareKakao = (result) => {
     content: {
       title: `나의 MBTI 테스트 결과: ${result.result}`,
       description: "나의 성격 유형을 확인해보세요!",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: `${window.location.origin}/logo.png`,
       link: {
         mobileWebUrl: window.location.href,
         webUrl: window.location.href,
