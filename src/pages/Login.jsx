@@ -15,8 +15,7 @@ const Login = () => {
 
       navigate("/");
     } catch (err) {
-      console.log("err", err);
-      alert("로그인에 실패했습니다");
+      alert(err.message || "로그인에 실패했습니다.");
     }
   };
 

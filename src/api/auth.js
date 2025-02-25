@@ -5,7 +5,10 @@ export const register = async (userData) => {
     const { data } = await serverApi.post(`/register`, userData);
     return data;
   } catch (err) {
-    console.log("err:", err);
+    if (err.response && err.response.status === 409) {
+      throw new Error("이미 등록된 아이디입니다.");
+    }
+    throw err;
   }
 };
 
@@ -14,7 +17,10 @@ export const login = async (userData) => {
     const { data } = await serverApi.post(`/login`, userData);
     return data;
   } catch (err) {
-    console.log("err", err);
+    if (err.response && err.response.status === 401) {
+      throw new Error("비밀번호가 틀렸거나, 등록되지 않은 사용자입니다.");
+    }
+    throw err;
   }
 };
 
